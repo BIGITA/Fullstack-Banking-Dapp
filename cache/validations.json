@@ -1,0 +1,144 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "IERC20": {
+        "src": "@openzeppelin\\contracts\\token\\ERC20\\IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin\\contracts\\utils\\math\\SafeMath.sol:16",
+        "version": {
+          "withMetadata": "f23413fb9a32be96f6ca2708da2f79110ef3b42935e0ab19c9f03d5b6ca3a5e2",
+          "withoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff",
+          "linkedWithoutMetadata": "08d24783a787f8a51dea0c166bb6f91a4f0865e02d03d749f102d332e6ead0ff"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Bank": {
+        "src": "contracts\\Bank.sol:6",
+        "version": {
+          "withMetadata": "52b936b24f0d16147a362e3c0bcc682d8e93bb624d14ca8dcd36b0f06bf028de",
+          "withoutMetadata": "1dd70546bf3af65602f6a77f0b8a0723a8cadbb1c45b9d8dbc9749fe303d5d35",
+          "linkedWithoutMetadata": "1dd70546bf3af65602f6a77f0b8a0723a8cadbb1c45b9d8dbc9749fe303d5d35"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "()",
+          "whitelistToken(bytes32,address)",
+          "getWhitelistedSymbols()",
+          "getWhitelistedTokenAddress(bytes32)",
+          "()",
+          "withdrawEther(uint256)",
+          "depositTokens(uint256,bytes32)",
+          "withdrawTokens(uint256,bytes32)",
+          "getTokenBalance(bytes32)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Bank",
+            "src": "contracts\\Bank.sol:11"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Bank",
+              "src": "contracts\\Bank.sol:7"
+            },
+            {
+              "label": "whitelistedSymbols",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_bytes32)dyn_storage",
+              "contract": "Bank",
+              "src": "contracts\\Bank.sol:8"
+            },
+            {
+              "label": "whitelistedTokens",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_mapping(t_bytes32,t_address)",
+              "contract": "Bank",
+              "src": "contracts\\Bank.sol:9"
+            },
+            {
+              "label": "balances",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_mapping(t_address,t_mapping(t_bytes32,t_uint256))",
+              "contract": "Bank",
+              "src": "contracts\\Bank.sol:10"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes32,t_uint256))": {
+              "label": "mapping(address => mapping(bytes32 => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_address)": {
+              "label": "mapping(bytes32 => address)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    }
+  ]
+}
